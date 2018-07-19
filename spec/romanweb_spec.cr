@@ -8,4 +8,9 @@ describe "Your::Kemal::App" do
     response.body.should eq "Hello World!"
   end
 
+  it "render /roman/1" do
+    get "/roman/1"
+    response.body.should eq "I"
+  end
+
 end
