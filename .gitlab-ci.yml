@@ -1,0 +1,77 @@
+# This file is a template, and might need editing before it works on your project.
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/crystallang/crystal/
+
+# Pick zero or more services to be used on all builds.
+# Only needed when using a docker container to run your tests in.
+# Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
+# services:
+#   - mysql:latest
+#   - redis:latest
+#   - postgres:latest
+
+# variables:
+#   POSTGRES_DB: database_name
+
+# Cache shards in between builds
+#cache:
+#  paths:
+#    - lib
+
+stages:
+  - test
+  - coverage
+
+# This is a basic example for a shard or script which doesn't use
+# services such as redis or postgres
+.shared_hidden_key: &shared  # This is an anchor
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq libxml2-dev
+    - crystal -v # Print out Crystal version for debugging
+    - shards
+
+# If you are using built-in Crystal Spec.
+spec:latest:
+  <<: *shared
+  stage: test
+  image: "crystallang/crystal:latest"
+  script:
+  - KEMAL_ENV=test ./bin/crystal-coverage spec/romanweb_spec.cr
+  artifacts:
+    paths:
+      - coverage/
+  
+ameba:latest:
+  <<: *shared
+  stage: test
+  image: "crystallang/crystal:latest"
+  script:
+  - bin/ameba
+  
+spec:nightly:
+  <<: *shared
+  stage: test
+  image: "crystallang/crystal:nightly"
+  script:
+  - KEMAL_ENV=test crystal spec
+  
+ameba:nightly:
+  <<: *shared
+  stage: test
+  image: "crystallang/crystal:nightly"
+  script:
+  - bin/ameba
+
+pages:
+  stage: coverage
+  dependencies:
+    - spec:latest
+  script:
+    - mv coverage/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
+
