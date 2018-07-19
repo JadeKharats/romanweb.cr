@@ -20,6 +20,10 @@ shards:
     github: luislavena/radix
     version: 0.3.8
 
+  roman:
+    git: https://gitlab.com/JadeKharats/roman.cr.git
+    commit: aa8b9e97b20f0c501c5a97ab9505ad39f24fd3df
+
   spec-kemal:
     github: kemalcr/spec-kemal
     version: 0.4.0
