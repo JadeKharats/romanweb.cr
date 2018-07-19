@@ -9,6 +9,8 @@ targets:
     main: src/romanweb.cr
 
 dependencies:
+  spec-kemal:
+    github: kemalcr/spec-kemal
   kemal:
     github: kemalcr/kemal
 
