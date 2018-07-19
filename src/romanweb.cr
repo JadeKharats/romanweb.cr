@@ -1,6 +1,7 @@
-require "./romanweb/*"
+require "kemal"
 
-# TODO: Write documentation for `Romanweb`
-module Romanweb
-  # TODO: Put your code here
+get "/" do
+  "Hello World!"
 end
+
+Kemal.run
