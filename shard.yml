@@ -1,0 +1,13 @@
+name: romanweb
+version: 0.1.0
+
+authors:
+  - Jade D. Kharats <jade.kharats@gmail.com>
+
+targets:
+  romanweb:
+    main: src/romanweb.cr
+
+crystal: 0.25.1
+
+license: MIT
