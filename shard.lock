@@ -22,7 +22,7 @@ shards:
 
   roman:
     git: https://gitlab.com/JadeKharats/roman.cr.git
-    commit: aa8b9e97b20f0c501c5a97ab9505ad39f24fd3df
+    commit: 2c859857916e32f26db4cbec5f16dd9fb2825685
 
   spec-kemal:
     github: kemalcr/spec-kemal
