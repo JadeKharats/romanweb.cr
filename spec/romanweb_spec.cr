@@ -1,9 +1,11 @@
 require "./spec_helper"
 
-describe Romanweb do
-  # TODO: Write tests
+describe "Your::Kemal::App" do
 
-  it "works" do
-    false.should eq(true)
+  # You can use get,post,put,patch,delete to call the corresponding route.
+  it "renders /" do
+    get "/"
+    response.body.should eq "Hello World!"
   end
+
 end
