@@ -5,8 +5,8 @@ get "/" do
   "Hello World!"
 end
 
-get "/roman/1" do  
-  converter = Roman.convert(1)
+get "/roman/:number" do |env|
+  converter = Roman.convert(env.params.url["number"].to_i)
 end
 
 
