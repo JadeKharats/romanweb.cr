@@ -13,4 +13,8 @@ describe "Your::Kemal::App" do
     response.body.should eq "I"
   end
 
+  it "render /roman/2896" do
+    response.body.should eq "MMDCCCXCVI"
+  end
+
 end
