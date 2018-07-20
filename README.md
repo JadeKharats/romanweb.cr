@@ -1,3 +1,5 @@
+[![coverage report](https://gitlab.com/JadeKharats/romanweb.cr/badges/develop/coverage.svg)](https://gitlab.com/JadeKharats/romanweb.cr/commits/develop)
+
 # romanweb
 
 TODO: Write a description here
