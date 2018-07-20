@@ -76,15 +76,34 @@ pages:
   only:
     - master
 
-build_docker:
-   image: docker:stable
-   services:
-   - docker:dind
-   variables:
-     DOCKER_HOST: tcp://docker:2375
-     DOCKER_DRIVER: overlay2
-   stage: build
-   script:
-     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
-     - docker build -t registry.gitlab.com/jadekharats/romanweb.cr .
-     - docker push registry.gitlab.com/jadekharats/romanweb.cr
+build_docker:stable:
+  image: docker:stable
+  services:
+  - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_DRIVER: overlay2
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+    - docker build -t registry.gitlab.com/jadekharats/romanweb.cr:stable .
+    - docker push registry.gitlab.com/jadekharats/romanweb.cr:stable
+  only:
+    refs:
+      - master
+
+build_docker:latest:
+  image: docker:stable
+  services:
+  - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_DRIVER: overlay2
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+    - docker build -t registry.gitlab.com/jadekharats/romanweb.cr:latest .
+    - docker push registry.gitlab.com/jadekharats/romanweb.cr:latest
+  only:
+    refs:
+      - develop
