@@ -15,7 +15,7 @@ end
 puts "  Extracting libraries for #{executable} ..."
 
 deps = [] of String
-output = `ldd #{executable}`.scan(/(\/.*)\s\(/) do |m|
+`ldd #{executable}`.scan(/(\/.*)\s\(/) do |m|
   library = m[1]
   deps << library
 
