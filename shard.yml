@@ -18,7 +18,7 @@ development_dependencies:
   spec-kemal:
     github: kemalcr/spec-kemal
   coverage:
-    github: anykeyh/crystal-coverage
+    github: JadeKharats/crystal-coverage
   ameba:
     github: veelenga/ameba
 

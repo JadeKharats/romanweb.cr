@@ -5,7 +5,7 @@ shards:
     version: 0.7.0
 
   coverage:
-    github: anykeyh/crystal-coverage
+    github: JadeKharats/crystal-coverage
     commit: af5246dde152b6e42352ce6e759bb07e9bed09ed
 
   kemal:
