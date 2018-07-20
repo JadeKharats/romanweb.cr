@@ -21,6 +21,7 @@
 stages:
   - test
   - coverage
+  - build
 
 # This is a basic example for a shard or script which doesn't use
 # services such as redis or postgres
@@ -75,3 +76,15 @@ pages:
   only:
     - master
 
+build_docker:
+   image: docker:stable
+   services:
+   - docker:dind
+   variables:
+     DOCKER_HOST: tcp://docker:2375
+     DOCKER_DRIVER: overlay2
+   stage: build
+   script:
+     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+     - docker build -t registry.gitlab.com/jadekharats/romanweb.cr .
+     - docker push registry.gitlab.com/jadekharats/romanweb.cr
