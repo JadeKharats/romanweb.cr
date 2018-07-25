@@ -2,7 +2,7 @@
 
 # romanweb
 
-TODO: Write a description here
+Expose the roman.cr lib on HTTP
 
 ## Installation
 
