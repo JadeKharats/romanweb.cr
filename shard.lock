@@ -2,15 +2,19 @@ version: 1.0
 shards:
   ameba:
     github: veelenga/ameba
-    version: 0.7.0
+    version: 0.8.0
 
   coverage:
     github: JadeKharats/crystal-coverage
-    commit: 043066401fd5c822dc24ba6a1ff78da8b2f390c5
+    commit: c23bbfc5a3d21ad82fe9c011ef5f2dda3bf50bd1
+
+  exception_page:
+    github: crystal-loot/exception_page
+    version: 0.1.1
 
   kemal:
     github: kemalcr/kemal
-    version: 0.23.0
+    version: 0.24.0
 
   kilt:
     github: jeromegn/kilt
@@ -22,7 +26,7 @@ shards:
 
   roman:
     git: https://gitlab.com/JadeKharats/roman.cr.git
-    commit: 2c859857916e32f26db4cbec5f16dd9fb2825685
+    commit: 9fbdbbbfe2fd5086cd10da454beb3bd58e9a5d04
 
   spec-kemal:
     github: kemalcr/spec-kemal

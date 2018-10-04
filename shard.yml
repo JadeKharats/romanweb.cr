@@ -8,7 +8,7 @@ targets:
   romanweb:
     main: src/romanweb.cr
 
-dependencies:  
+dependencies:
   roman:
     git: https://gitlab.com/JadeKharats/roman.cr.git
   kemal:
@@ -19,6 +19,7 @@ development_dependencies:
     github: kemalcr/spec-kemal
   coverage:
     github: JadeKharats/crystal-coverage
+    branch: master
   ameba:
     github: veelenga/ameba
 
