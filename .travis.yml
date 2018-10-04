@@ -3,4 +3,4 @@ install:
   - shards install
 script:
   - bin/ameba
-  - bin/crystal-coverage spec/romanweb_spec.cr -o coveralls
+  - KEMAL_ENV=test bin/crystal-coverage spec/romanweb_spec.cr -o coveralls
