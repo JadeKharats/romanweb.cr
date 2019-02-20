@@ -1,4 +1,4 @@
-FROM crystallang/crystal as builder
+FROM crystallang/crystal:0.27.2 as builder
 LABEL maintainer="Jade D. Kharats <jade.kharats@gmail.com>"
 
 WORKDIR /app
