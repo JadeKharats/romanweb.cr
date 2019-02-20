@@ -16,7 +16,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/romanweb/fork>)
+1. Fork it (<https://github.com/JadeKharats/romanweb/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -24,4 +24,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-github-user](https://github.com/your-github-user) Jade D. Kharats - creator, maintainer
+- [Jade D. Kharats](https://github.com/jadekharats) Jade D. Kharats - creator, maintainer
