@@ -8,9 +8,9 @@ targets:
   romanweb:
     main: src/romanweb.cr
 
-dependencies:  
+dependencies:
   roman:
-    git: https://gitlab.com/JadeKharats/roman.cr.git
+    github: JadeKharats/roman.cr
   kemal:
     github: kemalcr/kemal
   raven:
