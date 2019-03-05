@@ -13,6 +13,8 @@ dependencies:
     git: https://gitlab.com/JadeKharats/roman.cr.git
   kemal:
     github: kemalcr/kemal
+  raven:
+    github: Sija/raven.cr
 
 development_dependencies:
   spec-kemal:
