@@ -19,6 +19,9 @@ dependencies:
 development_dependencies:
   spec-kemal:
     github: kemalcr/spec-kemal
+  ameba:
+    github: veelenga/ameba
+
 
 crystal: 0.31.0
 
